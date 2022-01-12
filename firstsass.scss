@@ -1,0 +1,201 @@
+//assignment_1
+$main: "school";
+$child: "box";
+$language: "en"; // English
+$gap: 20px;
+.#{$main} {
+    padding: $gap;
+    @if $language=="en" {
+        direction: ltr;
+    }
+    @else if $language=="en" {
+        direction: rtl;
+    }
+    margin-left: $gap;
+    & .#{$main}-#{$child} {
+        padding: $gap/2;
+    }
+    &:hover .#{$main}-#{$child} {
+        background-color: #eee;
+    }
+}
+
+//assignment_2
+.content {
+    >.box {
+        padding: 15px;
+        >.title {
+            font-size: 18px;
+        }
+    }
+    & .cat {
+        padding: 15px;
+    }
+    &.premium:before {
+        content: "premium box";
+    }
+    &.premium:hover {
+        background-color: #eee;
+    }
+}
+
+//assignment_3
+.class {
+    > {
+        .child {
+            padding: 10px;
+        }
+    }
+}
+
+.class> {
+    .child {
+        padding: 10px;
+    }
+}
+
+.class {
+    >.child {
+        padding: 10px;
+    }
+}
+
+//assignment_4
+.class {
+    font: {
+        size: 20px;
+        weight: bold;
+    }
+    ;
+}
+
+//assignment_5
+//create parent calss .parent {
+//add the followingstyle for only parent's following class    &+.sibling {
+//margin: auto {
+//top: 10px;
+//}
+//add the following style for all classes called last and preceded by all parent  &~.last {
+//padding: 10px;
+//}
+//}
+//}
+//assignment_6
+@mixin arrow($position) {
+    content: "";
+    position: absolute;
+    border: 20px solid transparent;
+    @if($position=="top") {
+        top: -40px;
+        left: 50%;
+        transform: translateX(-50%);
+        transform: translateX(-50%);
+        border-bottom-color: red;
+    }
+    @else if($position=="right") {
+        right: -40px;
+        top: 50%;
+        transform: translateY(-50%);
+        transform: translateY(-50%);
+        border-left-color: red;
+    }
+    @else if($position=="bottom") {
+        bottom: -40px;
+        left: 50%;
+        transform: translateX(-50%);
+        transform: translateX(-50%);
+        border-top-color: red;
+    }
+    @else if($position=="left") {
+        left: -40px;
+        top: 50%;
+        transform: translateY(-50%);
+        transform: translateY(-50%);
+        border-right-color: red;
+    }
+}
+
+
+/*.element {
+    &:before {
+        @include arrow("top");
+        @include arrow("bottom");
+        @include arrow("right");
+        @include arrow("left");
+    }
+}*/
+
+.element {
+    &:before {
+        @include arrow("top");
+    }
+}
+
+.element {
+    &:before {
+        @include arrow("bottom");
+    }
+}
+
+.element {
+    &:before {
+        @include arrow("right");
+    }
+}
+
+.element {
+    &:before {
+        @include arrow("left");
+    }
+}
+
+//assignment_7
+$grid_num: 16;
+@for $var from 1 to 16 {
+    .col-#{$var} {
+        width: percentage($var/ $grid_num);
+    }
+}
+
+//assignment_8
+$names: "books" 20px red 18,
+"games" 30px green 18,
+"dvds" 20px blue;
+@each $name,
+$padd,
+$color,
+$font in $names {
+    .#{$name} {
+        padding: $padd;
+        color: #444;
+        font-size: $font;
+        border-bottom: 2px solid $color;
+        @if $name=="dvds" {
+            font-size: 16;
+        }
+    }
+}
+
+//assignment_9
+$num: 2;
+$start: 100;
+@function double($size) {
+    @return $size * $num;
+}
+
+@for $i from 1 to 6 {
+    @if $i==1 {
+        $start: $start;
+        .col-#{$start} {
+            width: #{$start}px;
+            height: double($start)px;
+        }
+    }
+    @else {
+        $start: $start * $i;
+        .col-#{$start} {
+            width: #{$start}px;
+            height: double($start)px;
+        }
+    }
+}

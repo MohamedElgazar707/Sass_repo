@@ -1,0 +1,202 @@
+.school {
+  padding: 20px;
+  direction: ltr;
+  margin-left: 20px;
+}
+.school .school-box {
+  padding: 10px;
+}
+.school:hover .school-box {
+  background-color: #eee;
+}
+
+.content > .box {
+  padding: 15px;
+}
+.content > .box > .title {
+  font-size: 18px;
+}
+.content .cat {
+  padding: 15px;
+}
+.content.premium:before {
+  content: "premium box";
+}
+.content.premium:hover {
+  background-color: #eee;
+}
+
+.class > .child {
+  padding: 10px;
+}
+
+.class > .child {
+  padding: 10px;
+}
+
+.class > .child {
+  padding: 10px;
+}
+
+.class {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/*.element {
+    &:before {
+        @include arrow("top");
+        @include arrow("bottom");
+        @include arrow("right");
+        @include arrow("left");
+    }
+}*/
+.element:before {
+  content: "";
+  position: absolute;
+  border: 20px solid transparent;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  transform: translateX(-50%);
+  border-bottom-color: red;
+}
+
+.element:before {
+  content: "";
+  position: absolute;
+  border: 20px solid transparent;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  transform: translateX(-50%);
+  border-top-color: red;
+}
+
+.element:before {
+  content: "";
+  position: absolute;
+  border: 20px solid transparent;
+  right: -40px;
+  top: 50%;
+  transform: translateY(-50%);
+  transform: translateY(-50%);
+  border-left-color: red;
+}
+
+.element:before {
+  content: "";
+  position: absolute;
+  border: 20px solid transparent;
+  left: -40px;
+  top: 50%;
+  transform: translateY(-50%);
+  transform: translateY(-50%);
+  border-right-color: red;
+}
+
+.col-1 {
+  width: 6.25%;
+}
+
+.col-2 {
+  width: 12.5%;
+}
+
+.col-3 {
+  width: 18.75%;
+}
+
+.col-4 {
+  width: 25%;
+}
+
+.col-5 {
+  width: 31.25%;
+}
+
+.col-6 {
+  width: 37.5%;
+}
+
+.col-7 {
+  width: 43.75%;
+}
+
+.col-8 {
+  width: 50%;
+}
+
+.col-9 {
+  width: 56.25%;
+}
+
+.col-10 {
+  width: 62.5%;
+}
+
+.col-11 {
+  width: 68.75%;
+}
+
+.col-12 {
+  width: 75%;
+}
+
+.col-13 {
+  width: 81.25%;
+}
+
+.col-14 {
+  width: 87.5%;
+}
+
+.col-15 {
+  width: 93.75%;
+}
+
+.books {
+  padding: 20px;
+  color: #444;
+  font-size: 18;
+  border-bottom: 2px solid red;
+}
+
+.games {
+  padding: 30px;
+  color: #444;
+  font-size: 18;
+  border-bottom: 2px solid green;
+}
+
+.dvds {
+  padding: 20px;
+  color: #444;
+  border-bottom: 2px solid blue;
+  font-size: 16;
+}
+
+.col-100 {
+  width: 100px;
+  height: 200 px;
+}
+
+.col-200 {
+  width: 200px;
+  height: 400 px;
+}
+
+.col-600 {
+  width: 600px;
+  height: 1200 px;
+}
+
+.col-2400 {
+  width: 2400px;
+  height: 4800 px;
+}
+
+.col-12000 {
+  width: 12000px;
+  height: 24000 px;
+}/*# sourceMappingURL=firstsass.css.map */
